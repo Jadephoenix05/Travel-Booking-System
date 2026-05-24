@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Bus
 
-def search_buses(Request):
+def search_buses(request):
     source = request.GET.get('source')
     destination = request.GET.get('destination')
 
