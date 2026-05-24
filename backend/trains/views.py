@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Train
 
-def search_trains(Request):
+def search_trains(request):
     source = request.GET.get('source')
     destination = request.GET.get('destination')
 
