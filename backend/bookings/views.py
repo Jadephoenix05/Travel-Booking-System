@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.http import JsonResponse
+from .models import bookings 
+
+def get_user_bookings(request):
+    user_bookings = bookings.objects.all().values()
+    
+    return JsonResponse(list(user_bookings), safe=False)
