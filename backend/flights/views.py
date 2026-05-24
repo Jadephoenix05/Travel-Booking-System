@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Flight
 
-def search_flights(Request):
+def search_flights(request):
     source = request.GET.get('source')
     destination = request.GET.get('destination')
 
